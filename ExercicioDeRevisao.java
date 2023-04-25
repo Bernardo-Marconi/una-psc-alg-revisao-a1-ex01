@@ -62,9 +62,9 @@ public class ExercicioDeRevisao {
 
         tentativas[2]++;
 
-    } while (tentativas[2] <= 4 && !contato.equals("sim") && !contato.equals("nao"));
+    } while (tentativas[2] <= 3 && !contato.equals("sim") && !contato.equals("nao"));
         
-    if (tentativas[2] == 3) {
+    if (tentativas[2] == 4) {
 
         System.out.println("Não foi possível realizar o diagnóstico. Gentileza procurar ajuda médica caso apareça algum sintoma.");
     
@@ -77,9 +77,9 @@ public class ExercicioDeRevisao {
 
         tentativas[3]++;
 
-    } while (tentativas[3] <= 4 && !retornoViagem.equals("sim") && !retornoViagem.equals("nao"));
+    } while (tentativas[3] <= 3 && !retornoViagem.equals("sim") && !retornoViagem.equals("nao"));
 
-    if (tentativas[3] == 3) {
+    if (tentativas[3] == 4) {
 
         System.out.println("Não foi possível realizar o diagnóstico. Gentileza procurar ajuda médica caso apareça algum sintoma.");
     
@@ -146,16 +146,15 @@ public class ExercicioDeRevisao {
 
         System.out.println("Paciente crítico! Gentileza aguardar em lockdown por 10 dias para ser acompanhado.");
 
-                                }
-                            } 
-                        }
-                    }
-                }
-            } 
+                     }
+                 } 
+            }
+        }
+    }
+}
 
         scan.close();
 
     } 
 
 }
-
