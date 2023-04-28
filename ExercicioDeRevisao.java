@@ -180,7 +180,11 @@ public class ExercicioDeRevisao {
         System.out.println("Paciente crítico! Gentileza aguardar em lockdown por 10 dias para ser acompanhado.");
 
                } 
+
             scan.close();
+
         } 
+
     } 
+    
 }
