@@ -24,12 +24,19 @@ public class ExercicioDeRevisao {
         System.out.println("Responda as perguntas com 'SIM' ou 'NAO': ");
 
     do {
+
         System.out.println("Seu cartão de vacina está em dia?");
         pergunta[0]=scan.nextLine();
 
         tentativas[0]++;
 
-    } while (tentativas[0] <= 2 && !pergunta[0].equals("sim") && !pergunta[0].equals("nao"));
+    } while (tentativas[0] <= 2 && !pergunta[0].equalsIgnoreCase("sim") && !pergunta[0].equalsIgnoreCase("nao"));
+
+    if(pergunta[0].equalsIgnoreCase("sim") || pergunta[0].equalsIgnoreCase("nao")){
+         
+        System.out.println("Resposta registrada! ");
+
+    } else {
 
     if (tentativas[0] == 3) {
 
@@ -39,13 +46,22 @@ public class ExercicioDeRevisao {
 
     }
 
+}
+
     do { 
+
         System.out.println("Teve algum dos sintomas recentemente? (dor de cabeça, febre, náusea, dor articular, gripe)");
         pergunta[1] = scan.nextLine();
 
         tentativas[1]++;
 
-    } while (tentativas[1] <= 2 && !pergunta[1].equals("sim") && !pergunta[1].equals("nao"));
+    } while (tentativas[1] <= 2 && !pergunta[1].equalsIgnoreCase("sim") && !pergunta[1].equalsIgnoreCase("nao"));
+
+    if(pergunta[1].equalsIgnoreCase("sim") || pergunta[1].equalsIgnoreCase("nao")){
+         
+        System.out.println("resposta registrada! ");
+
+    } else {
 
     if (tentativas[1] == 3) {
 
@@ -54,52 +70,69 @@ public class ExercicioDeRevisao {
         System.exit(0);
 
     }
+}
 
     do {
+
         System.out.println("Teve contato com pessoas com sintomas gripais nos últimos dias?");
         pergunta[2] = scan.nextLine();
 
         tentativas[2]++;
 
-    } while (tentativas[2] <= 3 && ! pergunta[2].equals("sim") && ! pergunta[2].equals("nao"));
-        
-    if (tentativas[2] == 4) {
+    } while (tentativas[2] <= 2 && ! pergunta[2].equalsIgnoreCase("sim") && ! pergunta[2].equalsIgnoreCase("nao"));
+      
+    if(pergunta[2].equalsIgnoreCase("sim") || pergunta[2].equalsIgnoreCase("nao")){
+         
+        System.out.println("resposta registrada! ");
+
+    } else {
+
+    if (tentativas[2] == 3) {
 
         System.out.println("Não foi possível realizar o diagnóstico. Gentileza procurar ajuda médica caso apareça algum sintoma.");
     
         System.exit(0);
 
     }
+}
     
     do {
+
         System.out.println("Está retornando de viagem realizada no exterior?");
         pergunta[3] = scan.nextLine();
 
         tentativas[3]++;
 
-    } while (tentativas[3] <= 3 && !pergunta[3].equals("sim") && !pergunta[3].equals("nao"));
+    } while (tentativas[3] <= 2 && !pergunta[3].equalsIgnoreCase("sim") && !pergunta[3].equalsIgnoreCase("nao"));
 
-    if (tentativas[3] == 4) {
+    if(pergunta[3].equalsIgnoreCase("sim") || pergunta[3].equalsIgnoreCase("nao")){
+         
+        System.out.println("resposta registrada! ");
+
+    } else {
+
+    if (tentativas[3] == 3) {
 
         System.out.println("Não foi possível realizar o diagnóstico. Gentileza procurar ajuda médica caso apareça algum sintoma.");
     
         System.exit(0);
 
     }
+}
     
-    if (pergunta[0].equals( "nao")){
+    if (pergunta[0].equalsIgnoreCase( "nao")){
 
         porcentagem[0]=10;
 
-    } if (pergunta[1].equals( "sim")){
+    } if (pergunta[1].equalsIgnoreCase( "sim")){
 
         porcentagem[1]=30;
 
-    } if (pergunta[2].equals( "sim")){
+    } if (pergunta[2].equalsIgnoreCase( "sim")){
 
         porcentagem[2]=30;
 
-    } if (pergunta[3].equals( "sim")){
+    } if (pergunta[3].equalsIgnoreCase( "sim")){
 
         porcentagem[3]=30;
 
